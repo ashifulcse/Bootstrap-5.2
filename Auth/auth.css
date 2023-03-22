@@ -1,0 +1,574 @@
+.progress-svg {
+    width: 65px;
+    height: 65px;
+    margin-top: -20px;
+}
+
+.progress-svg path {
+    fill: #FFF;
+}
+ 
+
+.park_wrapper {
+    transition: opacity 0.8s ease-in-out;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #FFF;
+    opacity: 1;
+    z-index: 100;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.park_form_logo {
+    width: 150px;
+    margin-bottom: 45px;
+}
+
+.park_form_button {
+    max-height: 50px;
+    background-color: #01579B;
+    color: #FFFFFF;
+    padding: 13px 10px;
+    border-radius: 30px;
+    font-size: 18px;
+    width: 90%;
+    margin: 0 auto;
+    border: none;
+    outline: none;
+    fill: transparent;
+    transition: all 0.5s;
+    box-shadow: 0px 1px 11px 1px rgba(110, 106, 106, 0.8);
+    cursor: pointer;
+}
+
+.park_form_button:hover {
+    box-shadow: 0px 3px 13px 3px rgba(110, 106, 106, 0.8);
+}
+
+.park_wrapper .square {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    border-radius: 30px;
+    -ms-transform: rotate(20deg);
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+}
+
+.park_wrapper .square.blue-dark {
+    background-color: #01579B;
+}
+
+.park_wrapper .square.red {
+    background-color: #d75a4a;
+}
+
+.park_wrapper .square.left-bottom {
+    bottom: -40px;
+    left: -100px;
+    box-shadow: 1px 4px 25px rgba(0, 0, 0, 0.33);
+}
+
+.park_wrapper .square.top-right {
+    top: -40px;
+    right: -100px;
+    box-shadow: -5px 4px 9px rgba(0, 0, 0, 0.31);
+}
+ 
+ 
+.park_input_group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.park_input_group i {
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    color: #ee3b33;
+    font-size: 23px;
+}
+ 
+.park_input_group_label {
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    color: #999;
+}
+
+.park_input_group_label.iconic {
+    left: 40px;
+}
+
+.park_input_group_input {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #757575;
+    background: transparent;
+    transition: all 0.7s;
+    -webkit-transition: all 0.5s;
+    color: #000;
+}
+
+.park_input_group_input.textarea {
+    resize: vertical;
+    overflow: auto;
+}
+
+.park_input_group_input.iconic {
+    padding: 10px 10px 5px 40px;
+}
+
+.park_input_group_input.iconic:focus~label {
+    top: -20px;
+    left: 5px;
+    color: #000;
+    font-size: 14px;
+}
+
+.park_input_group_input.iconic:focus~label~.park_input_group-bar:after {
+    width: 50%;
+}
+
+.park_input_group_input.iconic:focus~label~.park_input_group-bar:before {
+    width: 50%;
+}
+
+.park_input_group_input:focus {
+    outline: none;
+    border-bottom: 1px solid #d75a4a;
+}
+
+.park_input_group_input:focus~label {
+    top: -20px;
+    font-size: 14px;
+}
+
+.park_input_group_input:focus~.park_input_group-bar:before {
+    width: 50%;
+}
+
+.park_input_group_input:focus~.park_input_group-bar:after {
+    width: 50%;
+}
+
+.park_input_group-bar {
+    position: relative;
+    display: block;
+}
+
+.park_input_group-bar:before {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    background: #d75a4a;
+    left: 50%;
+}
+
+.park_input_group-bar:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    background: #d75a4a;
+    right: 50%;
+}
+
+.park_input_group_highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.park_wind-turbine {
+    position: absolute;
+    bottom: 20px;
+    right: 100px;
+    height: 128px;
+    width: 128px;
+}
+
+.park_wind-turbine.big {
+    position: absolute;
+    bottom: 20px;
+    right: 200px;
+    height: 128px;
+    width: 128px;
+}
+
+.park_wind-turbine__inner {
+    position: relative;
+}
+
+.park_wind-turbine__propeller {
+    width: 128px;
+    height: 128px;
+    -webkit-animation-name: rotate;
+    -webkit-animation-delay: 0;
+    -webkit-animation-duration: 0.9s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: rotate;
+    -moz-animation-delay: 0;
+    -moz-animation-duration: 0.9s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    animation-name: rotate;
+    animation-delay: 0;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.park_wind-turbine__propeller polyline {
+    stroke: #d75a4a;
+}
+
+.park_wind-turbine__propeller.big {
+    top: -32px;
+    position: absolute;
+    left: 25px;
+}
+
+.park_wind-turbine__propeller.big polyline {
+    stroke: #d75a4a;
+}
+
+.park_wind-turbine__poll {
+    width: 150px;
+    height: 350px;
+    position: absolute;
+    top: -95px;
+    left: -10px;
+}
+
+.park_wind-turbine__poll polygon {
+    fill: #d75a4a;
+}
+
+.park_wind-turbine__poll circle {
+    fill: #d75a4a;
+}
+
+.park_wind-turbine__poll.big {
+    width: 200px;
+    height: 500px;
+    top: -195px;
+}
+
+.park_wind-turbine__poll.big polygon {
+    fill: #d75a4a;
+}
+
+.park_wind-turbine__poll.big circle {
+    fill: #d75a4a;
+}
+
+@media screen and (max-width: 650px) {
+    .wind-turbine-parent {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-height: 800px) {
+    .square {
+        width: 175px;
+        height: 175px;
+    }
+}
+
+@media screen and (max-height: 580px) {
+    .square.top-right {
+        top: -80px;
+    }
+
+    .square.left-bottom {
+        bottom: -80px;
+    }
+}
+
+.circular-loader {
+    margin: -20px 5px;
+    fill: #009688;
+}
+
+.circular-loader.speed-slow {
+    -webkit-animation: spin 0.8s linear infinite;
+    -moz-animation: spin 0.8s linear infinite;
+    animation: spin 0.8s linear infinite;
+}
+
+.circular-loader.speed-normal {
+    -webkit-animation: spin 0.4s linear infinite;
+    -moz-animation: spin 0.4s linear infinite;
+    -ms-animation: spin 0.4s linear infinite;
+    animation: spin 0.4s linear infinite;
+}
+
+.circular-loader.speed-fast {
+    -webkit-animation: spin 0.2s linear infinite;
+    -moz-animation: spin 0.2s linear infinite;
+    animation: spin 0.2s linear infinite;
+}
+
+@-webkit-keyframes park_animation_style {
+    0% {
+        left: -100px;
+    }
+
+    50% {
+        left: -80px;
+    }
+
+    100% {
+        left: -100px;
+    }
+}
+
+@-moz-keyframes park_animation_style {
+    0% {
+        left: -100px;
+    }
+
+    50% {
+        left: -80px;
+    }
+
+    100% {
+        left: -100px;
+    }
+}
+
+@keyframes park_animation_style {
+    0% {
+        left: -100px;
+    }
+
+    50% {
+        left: -80px;
+    }
+
+    100% {
+        left: -100px;
+    }
+}
+
+@-webkit-keyframes park_animation_right {
+    0% {
+        right: -100px;
+    }
+
+    50% {
+        right: -80px;
+    }
+
+    100% {
+        right: -100px;
+    }
+}
+
+@-moz-keyframes park_animation_right {
+    0% {
+        right: -100px;
+    }
+
+    50% {
+        right: -80px;
+    }
+
+    100% {
+        right: -100px;
+    }
+}
+
+@keyframes park_animation_right {
+    0% {
+        right: -100px;
+    }
+
+    50% {
+        right: -80px;
+    }
+
+    100% {
+        right: -100px;
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes inputHighlighter {
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: center;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        transform-origin: center;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        transform-origin: center;
+    }
+}
+
+@-moz-keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: center;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        transform-origin: center;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        transform-origin: center;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: center;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        transform-origin: center;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        transform-origin: center;
+    }
+}
+
+.park_animation {
+    -webkit-animation-name: park_animation_style;
+    -webkit-animation-delay: 0;
+    -webkit-animation-duration: 2.5s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: park_animation_style;
+    -moz-animation-delay: 0;
+    -moz-animation-duration: 2.5s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+    animation-name: park_animation_style;
+    animation-delay: 0;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.park_animation_right {
+    -webkit-animation-name: park_animation_right;
+    -webkit-animation-delay: 0;
+    -webkit-animation-duration: 2.5s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: park_animation_right;
+    -moz-animation-delay: 0;
+    -moz-animation-duration: 2.5s;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+    animation-name: park_animation_right;
+    animation-delay: 0;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
